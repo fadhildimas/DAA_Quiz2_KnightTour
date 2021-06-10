@@ -42,7 +42,7 @@ The search algorithm we will use to solve the problem is the Depth First Search 
 The depth first exploration of the graph is exactly what we need in order to find a path with exactly 24 edges. We will see that when the depth-first search algorithm finds a dead end (a place in the graph where there are no more possible moves) it backs up the tree to the next deepest vertex that allows it to make a legal move.
 
 ## Source Code
-Source Code can be read in [this Source code](knightTour.py)
+Source Code can be read in [Here](knightTour.py)
 
 ### How to run Program
 1. Clone Repository to local Repository.
