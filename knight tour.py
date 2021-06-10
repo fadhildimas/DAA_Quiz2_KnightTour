@@ -41,7 +41,8 @@ class Problem:
 
 class Node:
 
-
+    def __init__(self, problem, parent=None, action=None, state=None):
+    
         # location of node on board
         self.location = None    
 
@@ -128,3 +129,29 @@ def dfs(problem):
                         goalNotFound = False
                         break
                     frontier.append(child)
+
+
+    # a solution is found; timeout didn't occur and a goal state is found (goalNotFound becomes false)
+    if not goalNotFound and not problem.timeout:
+        print("A solution found. ")
+        print(child.state)
+        print("Execution time is %s seconds" %(time.time() - start_time) )
+     # a solution is not found; timeout didn't occur and a goal state is not found (goalNotFound remains true)
+    elif goalNotFound and not problem.timeout:
+        print("No solution exists. ")
+        print(child.state)
+    # timeout occurred; a goal state is not found (goalNotFound remains true) and timeout occurred
+    elif goalNotFound and problem.timeout:
+        print("Timeout")
+    # prints the search method and number of expanded nodes
+    print("Searched with deep first search method. ")
+    print("Number of nodes expanded: " + str(num_expnded_node))
+                
+
+# it gets board size, timelimit and algorithm from user and that is algorithm  is used to find a solution
+choice = True
+while choice:
+    n = int(input("Enter board size: "))
+    timelimit = int(input("Enter timelimit: "))
+    problem = Problem(n, timelimit)
+    dfs(problem)
