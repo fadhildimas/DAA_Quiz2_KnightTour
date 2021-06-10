@@ -1,11 +1,6 @@
 import threading
 import time
 
-'''
-    * class for defining a problem
-    * a problem instance is created with board size(n) and time limit arguments
-'''
-
 class Problem:
     def __init__(self, n, timelimit):
 
