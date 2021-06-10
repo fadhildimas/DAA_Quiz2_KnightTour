@@ -41,4 +41,14 @@ The depth first exploration of the graph is exactly what we need in order to fin
 Source Code can be read in [this Source code](knightTour.py)
 
 ### Output
+```
+A solution found. 
+[[1, 1], [3, 2], [5, 1], [4, 3], [3, 1], [5, 2], [4, 4], [2, 5], [1, 3], [2, 1], [4, 2], [5, 4], [3, 3], [1, 2], [2, 4], [4, 5], [5, 3], [4, 1], [2, 2], [1, 4], [3, 5], [2, 3], [1, 5], [3, 4], [5, 5]]
+Execution time is 0.16220712661743164 seconds
+Searched with deep first search method. 
+Number of nodes expanded: 3421
+```
+
+### Visualization of the solution
+![Visualization image](images/visOutput.png)
 
