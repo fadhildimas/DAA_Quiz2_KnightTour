@@ -76,3 +76,55 @@ def isChildInFrontier(frontier, child):
         if node.state == child.state:
             return True
     return False
+
+# function for solving the knights tour problem using depth first search
+def dfs(problem):
+    # thread which will terminate the process once timelimit is reached is started
+    problem.timer.start()
+     # starting time of the algorithm is saved
+    start_time = time.time()
+
+    # root node is created
+    node = Node(problem)
+    # applies goal test to root node
+    if problem.goalTest(node.state):
+        print("A solution found. ")
+        print(node.state)
+        print("Execution time is %s seconds" %(time.time() - start_time))
+        return
+    
+    # frontier is initialized
+    frontier = []
+    frontier.append(node)
+    # explored set is initialized
+    explored = []
+    # goalNotFound variable is used to determine whether the search ends successfully or unsuccessfully, 
+    # and it is initialized to 0
+    goalNotFound = True
+    # keeps the number of nodes that are expanded
+    num_expnded_node = 0
+    # as long as frontier has nodes and timeout doesn't occur and the goal state is not found loop continues
+    while not problem.timeout and goalNotFound and frontier:
+        # last element in the frontier is retrieved(acts as a stack) and number of expanded nodes is increased by 1
+        node = frontier.pop()
+        num_expnded_node += 1
+        # state of the newly popped node is put into explored set
+        explored.append(node.state)
+        # for each action that a knight can take from its current location
+        # location of the tile that will be visited by that action is found 
+        # and if it is inside of the board a child node is created
+        # if this child node is not already visited(not in node.state)
+        # if it is not in the explored set
+        # and if child is not in frontier, then goal test will be applied on it
+        # if state of the child is the goal state then goalNotFound is set to False to indicate that a solution is found
+        # otherwise child will be put into frontier
+        for action in problem.actions:
+            temp_x = node.location[0] + action[0]
+            temp_y = node.location[1] + action[1]
+            if temp_x > 0 and temp_x <= problem.n and temp_y > 0 and temp_y <= problem.n:
+                child = Node(problem, node, action)
+                if child.location not in node.state and child.state not in explored and not isChildInFrontier(frontier, child):
+                    if problem.goalTest(child.state):
+                        goalNotFound = False
+                        break
+                    frontier.append(child)
