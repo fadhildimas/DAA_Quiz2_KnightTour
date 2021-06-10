@@ -20,7 +20,7 @@ Limiting the problem:
  - Start initial at 1,1 (x,y)
 ![Initial State image](images/initState.png)
 
-In this case we will use the 5 x 5 size board. The upper bound on the number of possible 5-5 chessboards is known to be xxxxx ; however there are still even more possible dead ends.
+In this case we will use the 5 x 5 size board. The upper bound on the number of possible 5-5 chessboards is known to be 1728 ; however there are still even more possible dead ends.
 
 We will solve the problem using 2 main steps which is:
  - Represent the legal moves of a knight on a chessboard as a graph.
