@@ -62,3 +62,6 @@ Number of nodes expanded: 3421
 ### Visualization of the solution
 ![Visualization image](images/visOutput.png)
 
+### Note:
+Although the score is based on contributions on github, in this project we have some problems in Pushing commit in github and renaming source code name resulting in some difference in contribution percentage. Therefore we hope the scores are distributed fairly for the two of us
+
