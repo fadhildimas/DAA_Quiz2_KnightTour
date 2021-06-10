@@ -7,3 +7,25 @@ The Knight’s Tour is a sequence of moves of knight on a chessboard such that t
 ![5x5 knight tour init image](images/knightsTour.png)
 
 ## Problem Analysis
+The knight’s tour puzzle is played on a chess board with a single chess piece, the knight. The object of the puzzle is to find a sequence of moves that allow the knight to visit every square on the board exactly once.
+
+One sequence is called a “tour”. 
+
+Limiting the problem:
+ - Using 5 x 5 size chess board
+ - Start initial at 1,1 (x,y)
+![Initial State image](images/initState.png)
+
+In this case we will use the 5 x 5 size board. The upper bound on the number of possible 5-5 chessboards is known to be xxxxx ; however there are still even more possible dead ends.
+
+We will solve the problem using 2 main steps which is:
+ - Represent the legal moves of a knight on a chessboard as a graph.
+ - Use a graph algorithm  to find a path where every vertex on the graph is visited exactly once.
+
+Building the knight’s tour graph
+To represent the knight’s tour problem as a graph we will use the following 2 ideas which is:
+ - Each square on the chessboard can be represented as a node in the graph.
+ - Use a graph algorithm to find a path through the graph of length rows x columns where every node is only visited exactly once.
+
+In this case we will use Python dictionary to hold our graph.
+
