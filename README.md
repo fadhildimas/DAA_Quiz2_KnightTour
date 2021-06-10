@@ -29,3 +29,13 @@ To represent the knight’s tour problem as a graph we will use the following 2 
 
 In this case we will use Python dictionary to hold our graph.
 
+## Design and Analysis Algorithm
+
+Implementing algorithm on knight’s tour
+
+The search algorithm we will use to solve the problem is the Depth First Search (DFS) algorithm. The depth first search creates a search tree by exploring one branch of the tree as deeply as possible.
+
+The depth first exploration of the graph is exactly what we need in order to find a path with exactly 24 edges. We will see that when the depth-first search algorithm finds a dead end (a place in the graph where there are no more possible moves) it backs up the tree to the next deepest vertex that allows it to make a legal move.
+
+### Source Code
+Source Code can be read in knight tour.py
