@@ -1,6 +1,10 @@
 # DAA E & D Quiz2
-Knight's Tour Problem Using DFS (Depth First Search) Algorithm
-
+## Knight's Tour Problem Using DFS (Depth First Search) Algorithm
+---
+### Group 24 YEP PAA
+- Fadhil Dimas Sucahyo (05111940000212)
+- Naufal Fabian Wibowo (05111940000223)
+---
 ## Problem
 The Knight’s Tour is a sequence of moves of knight on a chessboard such that the knight visits every square exactly once. If the knight ends on a square that is one knight’s move from beginning square (so that it could tour the board again immediately, following the same path), the tour is closed; otherwise. It is open
 
@@ -37,10 +41,16 @@ The search algorithm we will use to solve the problem is the Depth First Search 
 
 The depth first exploration of the graph is exactly what we need in order to find a path with exactly 24 edges. We will see that when the depth-first search algorithm finds a dead end (a place in the graph where there are no more possible moves) it backs up the tree to the next deepest vertex that allows it to make a legal move.
 
-### Source Code
+## Source Code
 Source Code can be read in [this Source code](knightTour.py)
 
-### Output
+### How to run Program
+1. Clone Repository to local Repository.
+2. Run knightTour.py
+3. input board size (n) and time limit (in seconds).
+
+## Output
+Output for 5x5 Board size.
 ```
 A solution found. 
 [[1, 1], [3, 2], [5, 1], [4, 3], [3, 1], [5, 2], [4, 4], [2, 5], [1, 3], [2, 1], [4, 2], [5, 4], [3, 3], [1, 2], [2, 4], [4, 5], [5, 3], [4, 1], [2, 2], [1, 4], [3, 5], [2, 3], [1, 5], [3, 4], [5, 5]]
